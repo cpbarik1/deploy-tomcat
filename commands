@@ -1,0 +1,16 @@
+apt update
+sudo apt install openjdk-8-jdk openjdk-8-jre
+export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java
+export JRE_HOME=/usr/lib/jvm/java-8-openjdk-amd64/jre
+PATH=$PATH:$HOME/bin:$JAVA_HOME
+cd /tmp
+wget https://archive.apache.org/dist/tomcat/tomcat-8/v8.5.35/bin/apache-tomcat-8.5.35.tar.gz
+sudo su - root
+mkdir -p /opt/tomcat
+cd /opt/tomcat
+cp /tmp/apache-tomcat-8.5.35.tar.gz .
+tar -xzvf apache-tomcat-8.5.35.tar.gz
+cd /opt/tomcat/apache-tomcat-8.5.35/
+cp tomcat-users.xml /opt/tomcat/apache-tomcat-8.5.35/conf/tomcat-users.xml
+cp context.xml /opt/tomcat/apache-tomcat-8.5.35/webapps/manager/META-INF/context.xml
+sh /opt/tomcat/apache-tomcat-8.5.35/bin/startup.sh
