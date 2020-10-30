@@ -5,8 +5,8 @@ Step-1: Create UBUNTU/CENTOS machine
 
 step-2: Install Java
 -------
->>> apt update
->>> sudo apt install openjdk-8-jdk openjdk-8-jre
+apt update
+sudo apt install openjdk-8-jdk openjdk-8-jre
 
 
 Step-3: set JAVA_HOME, JRE_HOME, PATH variable
@@ -80,6 +80,7 @@ root@ip-10-0-2-252:/opt/tomcat/apache-tomcat-8.5.35/bin#
 Step-9: verify tomcat process running
 -----------------------------------
 root@ip-10-0-2-252:/opt/tomcat/apache-tomcat-8.5.35/bin# ps -eaf|grep tomcat
+
 root      7132     1  3 12:47 pts/0    00:00:02 /usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java -Djava.util.logging.config.file=/opt/tomcat/apache-tomcat-8.5.35/conf/logging.properties -Djava.util.logging.manager=org.apache.juli.ClassLoaderLogManager -Djdk.tls.ephemeralDHKeySize=2048 -Djava.protocol.handler.pkgs=org.apache.catalina.webresources -Dorg.apache.catalina.security.SecurityListener.UMASK=0027 -Dignore.endorsed.dirs= -classpath /opt/tomcat/apache-tomcat-8.5.35/bin/bootstrap.jar:/opt/tomcat/apache-tomcat-8.5.35/bin/tomcat-juli.jar -Dcatalina.base=/opt/tomcat/apache-tomcat-8.5.35 -Dcatalina.home=/opt/tomcat/apache-tomcat-8.5.35 -Djava.io.tmpdir=/opt/tomcat/apache-tomcat-8.5.35/temp org.apache.catalina.startup.Bootstrap start
 root      7178  7085  0 12:48 pts/0    00:00:00 grep --color=auto tomcat
 root@ip-10-0-2-252:/opt/tomcat/apache-tomcat-8.5.35/bin#
