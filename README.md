@@ -95,7 +95,9 @@ tcp6       0      0 :::8080                 :::*                    LISTEN
 root@ip-10-0-2-252:/opt/tomcat/apache-tomcat-8.5.35/bin#
 
 
-
+Step-11: Access tomcat through browser
+--------
+http://3.7.73.165:8080/
 
 
 
